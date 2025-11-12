@@ -30,6 +30,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 transition-smooth shadow-strong"
+              onClick={() => window.location.href = '#destinations'}
             >
               Explore Now <ArrowRight className="ml-2" />
             </Button>
@@ -37,6 +38,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6 transition-smooth"
+              onClick={() => window.location.href = '#contact'}
             >
               Contact Us
             </Button>

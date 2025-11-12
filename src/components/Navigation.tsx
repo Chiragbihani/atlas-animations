@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ const Navigation = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="gradient-warm">Book Now</Button>
+            <Button className="gradient-warm" onClick={() => window.location.href = '#contact'}>Book Now</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -60,7 +60,7 @@ const Navigation = () => {
                   {link.name}
                 </a>
               ))}
-              <Button className="gradient-warm w-full">Book Now</Button>
+              <Button className="gradient-warm w-full" onClick={() => { setIsOpen(false); window.location.href = '#contact'; }}>Book Now</Button>
             </div>
           </div>
         )}
