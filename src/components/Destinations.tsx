@@ -1,11 +1,17 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Star } from "lucide-react";
 import destination1 from "@/assets/destination-1.jpg";
 import destination2 from "@/assets/destination-2.jpg";
 import destination3 from "@/assets/destination-3.jpg";
+import DestinationDetailModal from "./DestinationDetailModal";
+import BookingModal from "./BookingModal";
 
 const Destinations = () => {
+  const [selectedDestination, setSelectedDestination] = useState<any>(null);
+  const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const destinations = [
     {
       image: destination1,
@@ -86,7 +92,13 @@ const Destinations = () => {
                 <p className="text-muted-foreground mb-4">
                   {destination.description}
                 </p>
-                <Button className="w-full gradient-warm">
+                <Button 
+                  className="w-full gradient-warm"
+                  onClick={() => {
+                    setSelectedDestination(destination);
+                    setIsDetailModalOpen(true);
+                  }}
+                >
                   View Details
                 </Button>
               </CardContent>
@@ -100,6 +112,22 @@ const Destinations = () => {
           </Button>
         </div>
       </div>
+
+      {/* Modals */}
+      <DestinationDetailModal
+        destination={selectedDestination}
+        isOpen={isDetailModalOpen}
+        onClose={() => setIsDetailModalOpen(false)}
+        onBookNow={(destination) => {
+          setSelectedDestination(destination);
+          setIsBookingModalOpen(true);
+        }}
+      />
+      <BookingModal
+        destination={selectedDestination}
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+      />
     </section>
   );
 };

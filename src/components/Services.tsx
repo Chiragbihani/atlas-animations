@@ -42,8 +42,11 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-20 bg-background relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute top-40 right-20 w-72 h-72 bg-brand-orange/5 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-40 left-20 w-64 h-64 bg-brand-blue/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
+      <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-heading">
             Our Services

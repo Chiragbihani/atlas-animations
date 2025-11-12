@@ -10,6 +10,7 @@ const ScrollIndicator = () => {
     { id: "about", name: "About" },
     { id: "services", name: "Services" },
     { id: "destinations", name: "Destinations" },
+    { id: "blog", name: "Blog" },
     { id: "contact", name: "Contact" },
   ];
 
