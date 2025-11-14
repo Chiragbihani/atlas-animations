@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Instagram, Twitter, Youtube } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -26,8 +26,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/reel/DQ6oNDvCUuv/?igsh=Z3ZrZGdoOTJtMTF5", label: "Instagram" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Youtube, href: "#", label: "YouTube" },
   ];
