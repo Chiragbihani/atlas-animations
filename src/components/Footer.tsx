@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand Section */}
           <div>
-            <img src={logo} alt="Shree Holidays" className="h-20 w-auto mb-4" />
+            <img src={logo} alt="Shree Holidays" className="h-28 w-auto mb-4" />
             <p className="text-white/80 mb-4">
               Your trusted travel partner for safe and memorable journeys worldwide.
             </p>
