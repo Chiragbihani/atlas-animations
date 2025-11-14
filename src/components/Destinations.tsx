@@ -12,7 +12,9 @@ const Destinations = () => {
   const [selectedDestination, setSelectedDestination] = useState<any>(null);
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
-  const destinations = [
+  const [showAll, setShowAll] = useState(false);
+  
+  const allDestinations = [
     {
       image: destination1,
       title: "Tropical Paradise",
@@ -40,7 +42,63 @@ const Destinations = () => {
       price: "₹99,999",
       description: "Explore ancient history and Italian cuisine",
     },
+    {
+      image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&auto=format&fit=crop",
+      title: "Desert Safari",
+      location: "Dubai, UAE",
+      rating: 4.7,
+      reviews: 289,
+      price: "₹79,999",
+      description: "Experience the golden dunes and luxury resorts",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop",
+      title: "Northern Lights",
+      location: "Iceland",
+      rating: 4.9,
+      reviews: 378,
+      price: "₹1,49,999",
+      description: "Witness the magical aurora borealis and geothermal wonders",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&auto=format&fit=crop",
+      title: "Tropical Islands",
+      location: "Bali, Indonesia",
+      rating: 4.8,
+      reviews: 445,
+      price: "₹69,999",
+      description: "Discover beautiful temples and pristine beaches",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?w=800&auto=format&fit=crop",
+      title: "Historic Wonders",
+      location: "Paris, France",
+      rating: 4.9,
+      reviews: 523,
+      price: "₹1,09,999",
+      description: "Explore the city of love and iconic landmarks",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&auto=format&fit=crop",
+      title: "Spiritual Journey",
+      location: "Kyoto, Japan",
+      rating: 4.8,
+      reviews: 356,
+      price: "₹1,19,999",
+      description: "Experience ancient temples and Japanese culture",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1495954484750-af469f2f9be5?w=800&auto=format&fit=crop",
+      title: "Wild Safari",
+      location: "Serengeti, Tanzania",
+      rating: 4.9,
+      reviews: 298,
+      price: "₹1,39,999",
+      description: "Witness the great migration and African wildlife",
+    },
   ];
+
+  const destinations = showAll ? allDestinations : allDestinations.slice(0, 3);
 
   return (
     <section id="destinations" className="py-20 bg-muted/30">
@@ -107,8 +165,13 @@ const Destinations = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            View All Destinations
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Show Less" : "View All Destinations"}
           </Button>
         </div>
       </div>

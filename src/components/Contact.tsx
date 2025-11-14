@@ -9,19 +9,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 98765 43210",
-      link: "tel:+919876543210",
+      details: "+91 96941 99111",
+      link: "tel:+919694199111",
     },
     {
       icon: Mail,
       title: "Email",
-      details: "info@shreeholidays.com",
-      link: "mailto:info@shreeholidays.com",
+      details: "shreeholidays2020@gmail.com",
+      link: "mailto:shreeholidays2020@gmail.com",
     },
     {
       icon: MapPin,
       title: "Office",
-      details: "Mumbai, Maharashtra, India",
+      details: "Bikaner, Rajasthan",
       link: "#",
     },
   ];
