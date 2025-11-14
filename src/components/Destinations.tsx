@@ -43,15 +43,6 @@ const Destinations = () => {
       description: "Explore ancient history and Italian cuisine",
     },
     {
-      image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&auto=format&fit=crop",
-      title: "Desert Safari",
-      location: "Dubai, UAE",
-      rating: 4.7,
-      reviews: 289,
-      price: "₹79,999",
-      description: "Experience the golden dunes and luxury resorts",
-    },
-    {
       image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop",
       title: "Northern Lights",
       location: "Iceland",
