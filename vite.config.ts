@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/", // REQUIRED for custom domain on GitHub Pages
+  base: "/atlas-animations/", // REQUIRED for custom domain on GitHub Pages
 
   server: {
     host: "::",
